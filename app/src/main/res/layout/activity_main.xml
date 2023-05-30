@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:ems="12"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/white"
+                    android:hint="Enter City Name"
+                    android:background="@drawable/round_bg"
+                    android:drawableLeft="@drawable/baseline_location_on_24"
+                    android:id="@+id/edtSearch"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/baseline_search_24"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/imgSearch"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Previous Result"
+                android:textSize="25dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:id="@+id/txtPrev"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="38 C"
+                android:textSize="80dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:id="@+id/txtWeatherTemp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cloudy"
+                android:textSize="25dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:id="@+id/txtWeatherCondition"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jaunpur"
+                android:textSize="40dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:id="@+id/txtCityName"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"/>
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:visibility="gone"
+                android:id="@+id/progressBar"/>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="130dp"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="true"
+                android:backgroundTint="#5D68B1"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="78"
+                            android:textSize="30dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:id="@+id/txtWindSpeed"
+                            android:layout_gravity="center" />
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/baseline_speed_24"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/imgWindIcon"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Wind Flow"
+                            android:textSize="18dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:layout_gravity="center" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="78"
+                            android:textSize="30dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:id="@+id/txtHumidity"
+                            android:layout_gravity="center" />
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/humidity"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/imgHumidity"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Humidity"
+                            android:textSize="18dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:layout_gravity="center" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="78"
+                            android:textSize="30dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:id="@+id/txtFeelsLike"
+                            android:layout_gravity="center" />
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/baseline_device_thermostat_24"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Feels Like"
+                            android:textSize="18dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:layout_gravity="center" />
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="true"
+                android:backgroundTint="#5D68B1"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="78"
+                            android:textSize="30dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:id="@+id/txtWindDegree"
+                            android:layout_gravity="center" />
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/baseline_speed_24"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Wind Degree"
+                            android:textSize="18dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:layout_gravity="center" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="78"
+                            android:textSize="30dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:id="@+id/txtMinTemp"
+                            android:layout_gravity="center" />
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/baseline_device_thermostat_24"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Min Temp"
+                            android:textSize="18dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:layout_gravity="center" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="78"
+                            android:textSize="30dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:id="@+id/txtMaxTemp"
+                            android:layout_gravity="center" />
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/baseline_device_thermostat_24"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Max Temp"
+                            android:textSize="18dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:layout_gravity="center" />
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
